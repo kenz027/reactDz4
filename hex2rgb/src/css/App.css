@@ -1,0 +1,30 @@
+html, body, #root, .App{
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.color__enter,.color__result{
+  width: 220px;
+  height: 45px;
+  font-size: 30px;
+  letter-spacing: 2;
+} 
+.color__enter{
+  color:black;
+  background-color: white;
+  border: none;
+}
+.color__enter:focus{
+  outline: none;
+}
+.color__result{
+  color:white;
+  background-color: rgba(0,0,0,.3);
+}

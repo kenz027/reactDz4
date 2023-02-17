@@ -1,0 +1,47 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App{
+
+}
+.App input{
+
+}
+.App ul{
+  list-style-type: none;
+  display: flex;
+
+}
+.App ul li{
+  position: relative;
+}
+.App label{
+  pointer-events: none;
+}
+.select-file-btn{
+  width: 600px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #fff;
+  color:#000;
+  font-size: 50px;
+}
+.App ul li button{
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  color:#000;
+  width: 30px;
+  height:30px;
+  position: absolute;
+  right:0;
+  top:0;
+}
+.App ul li img{
+  max-width: 300px;
+  max-height: 300px;
+}
