@@ -3,7 +3,6 @@ import { useState } from "react"
 function App() {
   const [hexValue, setHexValue] = useState('#');
   const [rgbValue, setRgbValue] = useState('');
-
   const HEX2RGB = (hex) => {
     setHexValue(hex)
     let values = hex.split(''),
@@ -21,19 +20,17 @@ function App() {
         if (isFinite(r) && isFinite(g) && isFinite(b)){
           const resultrgb = `rgb(${[r, g, b]})`;
           setRgbValue(resultrgb);
-          document.getElementById('root').style.backgroundColor  = resultrgb;
         } else{
-          setRgbValue('Ошибка!');
-          document.getElementById('root').style.backgroundColor = 'red';
+          setRgbValue('red');
         }
       }
     }
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{background:rgbValue}}>
       <input type='text' className="color__enter" maxLength="7" value={hexValue} onChange={(e)=>HEX2RGB(e.target.value)} />
-      <p className="color__result">{rgbValue}</p>
+      <p className="color__result">{rgbValue === 'red' ? 'Ошибка' : rgbValue}</p>
     </div>
   )
     
